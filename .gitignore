@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+# Visual Studio files
+.vs/*
+*.vcxproj.user
+
+# Unnecessary folders
+bin/*
+obj/*
+packages/*
+
+# Generated files
+canvas/Generated Files/*

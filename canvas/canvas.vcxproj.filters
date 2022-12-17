@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainWindow.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="App.idl" />
+    <Midl Include="MainWindow.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="dx\context.cpp">
+      <Filter>dx</Filter>
+    </ClCompile>
+    <ClCompile Include="dx\device_state.cpp">
+      <Filter>dx</Filter>
+    </ClCompile>
+    <ClCompile Include="dx\render_state.cpp">
+      <Filter>dx</Filter>
+    </ClCompile>
+    <ClCompile Include="entity\line.cpp">
+      <Filter>entity</Filter>
+    </ClCompile>
+    <ClCompile Include="resources\load.cpp">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="engine.cpp" />
+    <ClCompile Include="dx\parameters\format.cpp">
+      <Filter>dx\parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="dx\parameters\input_layout.cpp">
+      <Filter>dx\parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="dx\shader\includes.cpp">
+      <Filter>dx\shader</Filter>
+    </ClCompile>
+    <ClCompile Include="dx\shader\macros.cpp">
+      <Filter>dx\shader</Filter>
+    </ClCompile>
+    <ClCompile Include="dx\shader\manager.cpp">
+      <Filter>dx\shader</Filter>
+    </ClCompile>
+    <ClCompile Include="dx\parameters\scissor.cpp">
+      <Filter>dx\parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="dx\parameters\viewport.cpp">
+      <Filter>dx\parameters</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="dx\context.h">
+      <Filter>dx</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\defines.h">
+      <Filter>dx</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\device_state.h">
+      <Filter>dx</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\draw_state.h">
+      <Filter>dx</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\render_state.h">
+      <Filter>dx</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\parameters\blend_state.h">
+      <Filter>dx\parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\parameters\depth_state.h">
+      <Filter>dx\parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\parameters\depth_stencil_state.h">
+      <Filter>dx\parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\parameters\rasterizer_state.h">
+      <Filter>dx\parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\parameters\stencil_state.h">
+      <Filter>dx\parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="entity\base.h">
+      <Filter>entity</Filter>
+    </ClInclude>
+    <ClInclude Include="entity\line.h">
+      <Filter>entity</Filter>
+    </ClInclude>
+    <ClInclude Include="resources\load.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="engine.h" />
+    <ClInclude Include="dx\parameters\scissor.h">
+      <Filter>dx\parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\parameters\viewport.h">
+      <Filter>dx\parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\parameters\input_layout.h">
+      <Filter>dx\parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\parameters\format.h">
+      <Filter>dx\parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\shader\cache.h">
+      <Filter>dx\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\shader\includes.h">
+      <Filter>dx\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\shader\macros.h">
+      <Filter>dx\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\shader\manager.h">
+      <Filter>dx\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="dx\parameters\primitive_topology.h">
+      <Filter>dx\parameters</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="dx">
+      <UniqueIdentifier>{7f0b2a60-125c-4c5c-b5f3-32b766bbb3fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dx\parameters">
+      <UniqueIdentifier>{f6d7bea2-02cf-4d2b-b999-7cea82c83005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="entity">
+      <UniqueIdentifier>{1e20799a-f624-479f-a5ba-8020d72f0e92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{5de57d83-b880-4f7d-9870-2c86f016487c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dx\shader">
+      <UniqueIdentifier>{71c9bfc2-b2dc-45cf-9a48-35b7292b425c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="shaders.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
