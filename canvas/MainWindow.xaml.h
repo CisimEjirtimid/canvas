@@ -9,8 +9,6 @@ namespace winrt::canvas::implementation
         cisim::Channel<cisim::canvas::Message> _messages;
         cisim::canvas::Engine _engine;
 
-        cisim::test::ThreadTest _test;
-
         MainWindow();
 
         int32_t MyProperty();

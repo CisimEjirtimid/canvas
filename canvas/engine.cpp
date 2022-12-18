@@ -6,7 +6,7 @@ namespace cisim::canvas
         : output(o)
     {}
 
-    void onStart(State& state)
+    void Engine::onStart(State& state)
     {
         try
         {
@@ -23,7 +23,7 @@ namespace cisim::canvas
         }
     }
 
-    void onLoopStart(State& state)
+    void Engine::tick(State& state)
     {
         auto& device = dx::DeviceState::instance();
 
@@ -36,24 +36,22 @@ namespace cisim::canvas
         device.present();
     }
 
-    void execute([[maybe_unused]] State& state, [[maybe_unused]] Noop& cmd)
+    void Engine::execute([[maybe_unused]] State& state, [[maybe_unused]] Noop& cmd)
     {
         // NOOP
     }
 
-    void execute(State& state, GetSwapChain& cmd)
+    void Engine::execute(State& state, GetSwapChain& cmd)
     {
         state.output.send(SwapChain{ dx::DeviceState::instance().swap_chain });
-
-        cmd.notify();
     }
 
-    void execute([[maybe_unused]] State& state, Resize& cmd)
+    void Engine::execute([[maybe_unused]] State& state, Resize& cmd)
     {
         dx::DeviceState::instance().framebuffer_resize(cmd.size);
     }
 
-    void execute(State& state, Insert& cmd)
+    void Engine::execute(State& state, Insert& cmd)
     {
         // TEST
         auto line = std::make_unique<entity::Line>();
@@ -73,7 +71,7 @@ namespace cisim::canvas
         state.entities.push_back(std::move(line));
     }
 
-    void execute(State& state, Delete& cmd)
+    void Engine::execute(State& state, Delete& cmd)
     {
     }
 }

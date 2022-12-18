@@ -33,7 +33,7 @@ namespace cisim::canvas
 
     struct Insert
     {
-        Path mesh;
+        std::filesystem::path mesh;
     };
 
     struct Delete
@@ -41,7 +41,7 @@ namespace cisim::canvas
         std::string id;
     };
 
-    using Command = std::variant<Noop, GetSwapChain, Resize, Insert, Delete>;
+    using Commands = std::variant<Noop, GetSwapChain, Resize, Insert, Delete>;
 
     struct State
     {
@@ -53,17 +53,21 @@ namespace cisim::canvas
         State(Channel<Message>& o);
     };
 
-    void onStart(State& state);
-    void onLoopStart(State& state);
-    void execute([[maybe_unused]] State& state, [[maybe_unused]] Noop& cmd);
-    void execute(State& state, GetSwapChain& cmd);
-    void execute([[maybe_unused]] State& state, Resize& cmd);
-    void execute(State& state, Insert& cmd);
-    void execute(State& state, Delete& cmd);
+    struct Engine : public Thread<State, Commands>
+    {
+        void onStart(State& state);
 
-    using Engine = EZThread<State, Command>;
+        void tick(State& state);
+
+        void execute([[maybe_unused]] State& state, [[maybe_unused]] Noop& cmd);
+        void execute(State& state, GetSwapChain& cmd);
+        void execute([[maybe_unused]] State& state, Resize& cmd);
+        void execute(State& state, Insert& cmd);
+        void execute(State& state, Delete& cmd);
+    };
 }
 
+/*
 namespace cisim::test
 {
     struct ThreadTest : public async::Thread
@@ -72,6 +76,6 @@ namespace cisim::test
         {
             std::cout << "Tick called" << std::endl;
         }
-    };
-}
+   };
+}*/
 

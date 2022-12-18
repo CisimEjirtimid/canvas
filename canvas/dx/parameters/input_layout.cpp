@@ -68,7 +68,7 @@ float4 main(vs_input input) : SV_Position
 
         // Read input layout description from shader info
         InputLayout input_layout;
-        for (uint32 i = 0; i < shader_desc.InputParameters; i++)
+        for (uint i = 0; i < shader_desc.InputParameters; i++)
         {
             D3D11_SIGNATURE_PARAMETER_DESC param_desc;
             reflection->GetInputParameterDesc(i, &param_desc);

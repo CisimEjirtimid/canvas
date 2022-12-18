@@ -50,8 +50,6 @@ namespace winrt::canvas::implementation
 
                 _engine.async(cisim::canvas::Resize{ cisim::SizeU{ panel().Height(), panel().Width() } });
             });
-
-        _test.start();
     }
 
     int32_t MainWindow::MyProperty()
@@ -68,7 +66,7 @@ namespace winrt::canvas::implementation
     {
         action().Content(box_value(L"Letter drawn!"));
 
-        _engine.async(cisim::canvas::Insert{ cisim::Path{ "C:/test.txt" } });
+        _engine.async(cisim::canvas::Insert{ std::filesystem::path{ "C:/test.txt" } });
     }
 
     void MainWindow::panel_size_changed([[maybe_unused]] IInspectable const& sender, SizeChangedEventArgs const& e)

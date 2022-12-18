@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "canvas", "canvas\canvas.vcxproj", "{D380CFCB-4B84-4885-A4B0-4F6E29DDC17D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tools", "tools\tools.vcxproj", "{5AA338DB-C1AD-46E7-B0EC-44C8DAF3CFFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +17,10 @@ Global
 		{D380CFCB-4B84-4885-A4B0-4F6E29DDC17D}.Debug|x64.Build.0 = Debug|x64
 		{D380CFCB-4B84-4885-A4B0-4F6E29DDC17D}.Release|x64.ActiveCfg = Release|x64
 		{D380CFCB-4B84-4885-A4B0-4F6E29DDC17D}.Release|x64.Build.0 = Release|x64
+		{5AA338DB-C1AD-46E7-B0EC-44C8DAF3CFFC}.Debug|x64.ActiveCfg = Debug|x64
+		{5AA338DB-C1AD-46E7-B0EC-44C8DAF3CFFC}.Debug|x64.Build.0 = Debug|x64
+		{5AA338DB-C1AD-46E7-B0EC-44C8DAF3CFFC}.Release|x64.ActiveCfg = Release|x64
+		{5AA338DB-C1AD-46E7-B0EC-44C8DAF3CFFC}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
