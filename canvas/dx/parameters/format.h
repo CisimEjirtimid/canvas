@@ -57,7 +57,7 @@ namespace std
     {
         // rely on the standard implementation of `parse` function, so don't reimplement it
 
-        auto format(const Format& fmt, format_context& ctx)
+        auto format(const Format& fmt, format_context& ctx) const
         {
             static map<ComponentType, string> input_type{
                 { ComponentType::Unknown, "" },

@@ -66,7 +66,7 @@ namespace std
     template <typename T>
     struct formatter<vector<T>> : combined_formatter
     {
-        auto format(const std::vector<T>& vec, format_context& ctx)
+        auto format(const std::vector<T>& vec, format_context& ctx) const
         {
             auto format_string = std::format("{{0:{0}}}{{1}}", inner_format_string);
             auto& delimiter = outer_format_string;
@@ -85,7 +85,7 @@ namespace std
     {
         static atomic_int index;
 
-        auto format(const InputElement& element, format_context& ctx)
+        auto format(const InputElement& element, format_context& ctx) const
         {
             auto format_string = std::format("{{0}} {0}{1} : {{1}}{{2}}", outer_format_string, index++);
 

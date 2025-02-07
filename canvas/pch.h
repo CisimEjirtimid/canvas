@@ -44,19 +44,13 @@
 
 #define WIN32_LEAN_AND_MEAN
 
-// base
-#include <tools/config_builder.h>
+// tools
+#include <tools/mdsp_common/wrapper.h>
 #include <tools/enum_wrapper.h>
-#include <tools/h4.h>
 #include <tools/range.h>
 #include <tools/singleton.h>
-#include <tools/size.h>
-#include <tools/static_vec.h>
-#include <tools/time.h>
 #include <tools/thread.h>
-#include <tools/types.h>
 #include <tools/type_tuple.h>
-#include <tools/variant_match.h>
 
 // canvas/resources
 #include <canvas/resources/load.h>

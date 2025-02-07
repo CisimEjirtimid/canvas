@@ -6,7 +6,7 @@ namespace cisim::canvas::dx::parameters
     {
         float2 top_left;
         float2 bottom_right;
-        Rangef depth;
+        frange depth;
 
         inline D3D11_VIEWPORT to_descriptor() const;
 

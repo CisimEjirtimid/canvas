@@ -22,7 +22,7 @@ namespace winrt::canvas::implementation
         auto messages_config = ChannelConfig{}
             .withCapacity(0)
             .withSendTimeout(0_s)
-            .withRecvTimeout(Time::FromSeconds(INT_MAX));
+            .withRecvTimeout(Time::FromSeconds(std::numeric_limits<int>::max()));
 
         _messages.open(messages_config);
 

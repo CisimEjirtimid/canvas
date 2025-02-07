@@ -200,7 +200,7 @@ namespace cisim::canvas::dx
             .set(Viewport{
                 .top_left = float2{ 0.f, 0.f },
                 .bottom_right = float2{ 1.f, 1.f },
-                .depth = Rangef{ 0.f, 1.f }
+                .depth = frange{ 0.f, 1.f }
             })
             .set(Scissor{
                 .top_left = float2{ 0.f, 0.f },

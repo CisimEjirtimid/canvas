@@ -42,3 +42,6 @@ packages/*
 
 # Generated files
 canvas/Generated Files/*
+
+# vcpkg
+vcpkg_installed/*

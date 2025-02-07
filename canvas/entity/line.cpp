@@ -52,9 +52,10 @@ namespace cisim::canvas::entity
             .buffer = device.create_buffer<float>(1)
         };
 
-        auto transform = H4F::Eye().data();
-        device.fill_buffer(state.constants["transform"].buffer,
-            transform, 16);
+        // TODO: use mdarray to represent transforms
+        //auto transform = H4F::Eye().data();
+        //device.fill_buffer(state.constants["transform"].buffer,
+        //    transform, 16);
 
         float alpha = 1.0f;
         device.fill_buffer(state.constants["alpha"].buffer,

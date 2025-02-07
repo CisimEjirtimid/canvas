@@ -29,7 +29,7 @@ namespace cisim::canvas::dx::parameters
                 (viewport.Width - viewport.TopLeftX) / width,
                 (viewport.Height - viewport.TopLeftY) / height
             },
-            .depth = Rangef{
+            .depth = frange{
                 viewport.MinDepth,
                 viewport.MaxDepth
             }
